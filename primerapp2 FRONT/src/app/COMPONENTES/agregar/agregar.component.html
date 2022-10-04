@@ -1,0 +1,34 @@
+<div class="display-formulario p-3">
+    <div class="col-md-6 offset-md-3">
+        <h2 class="text-center"> Registro de Libro</h2>
+        <form action="">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Titulo </span>
+                <input type="text" class="form-control" placeholder="Escriba un titulo" id="titulo" name="titulo" [(ngModel)]="libroNuevo.titulo">
+            </div>
+            <br>
+            <br>
+            
+            <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">Autor </span>
+            <input type="text" class="form-control" placeholder="Escriba un autor" id="autor" name="autor" [(ngModel)]="libroNuevo.autor">
+            </div>
+
+            <br>
+            <br>
+
+            <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">Editorial </span>
+            <input type="text" class="form-control" placeholder="Escriba una editorial" id="editorial" name="editorial" [(ngModel)]="libroNuevo.editorial">
+            </div>
+
+            <br>
+            <br>
+
+            <div class="col-md-6 offset-md-3">
+                <button class="btn btn-dark" (click)="agregarLibro()">GUARDAR</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div *ngIf="!load">
+    <div class="spinner">
+        <img src="../../assets/spinner.gif" alt="Responsive image">
+    </div>
+</div>
+
+
+
+<div *ngIf="load">
+    <div class="display-listado p-3">
+        <div class="container">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h2>Catálogo de Libros</h2>
+                                <form class="row g-4">
+                                    <div class="col-auto">
+                                        <label><b>Filtro de Búsqueda: </b></label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input type="text" name="palabraClave" class="form-control" id="palabraClave" placeholder="Palabra Clave..." [(ngModel)]="query">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-info btn-sm" value="Buscar" (click)="botonSearchLibro(query)">Buscar </button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-secondary btn-sm" value="limpiar" (click)="getLibros()"> Nueva Búsqueda </button>
+                                    </div>                                    
+                                </form>
+
+                                <div class="d-grid d-md-flex justify-content-md-end">        
+                                    <button class="btn btn-primary btn-sm" [routerLink]="['/agregar']">Agregar Nuevo</button>
+                                </div>
+
+    
+                <div class="card-body">
+                    
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="table-primary">
+                                <th>ID</th>
+                                <th>TITULO</th>
+                                <th>AUTOR</th>
+                                <th>EDITORIAL</th>
+                                <td colspan="2"><b>ACCIONES</b></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let libro of libros">
+                                <td><strong> {{libro.id_libro}} </strong></td>
+                                <td> {{libro.titulo}} </td>
+                                <td> {{libro.autor}} </td>
+                                <td> {{libro.editorial}} </td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm" (click)="eliminar(libro.id_libro)">Eliminar</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" [routerLink]="['/editar/',libro.id_libro]">Modificar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>               
+                </div>
+            </div>
+            <app-footer></app-footer>
+        </div>
+    </div>
+

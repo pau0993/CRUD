@@ -1,0 +1,12 @@
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+.display-listado {
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 250px);
+}

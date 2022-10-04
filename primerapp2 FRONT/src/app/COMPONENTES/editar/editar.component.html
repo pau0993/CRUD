@@ -1,0 +1,28 @@
+<div class="display-editar p-3">
+    <div class="col-md-6 offset-md-3">
+        <h2 class="text-center"> Editar Libro</h2>
+        <form action="">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Titulo </span>
+                <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="libroActual.titulo">
+            </div>
+            <br>
+            <br>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Autor </span>
+                <input type="text" class="form-control" id="autor" name="autor" [(ngModel)]="libroActual.autor">
+            </div>
+            <br>
+            <br>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Autor </span>
+                <input type="text" class="form-control" id="editorial" name="editorial" [(ngModel)]="libroActual.editorial">
+            </div>
+            <br>
+            <br>
+            <div class="col-md-6 offset-md-3">
+                <button class="btn btn-dark" (click)="guardar()">Guardar cambios</button>
+            </div>
+        </form>
+    </div>
+</div>

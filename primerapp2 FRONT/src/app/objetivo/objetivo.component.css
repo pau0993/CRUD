@@ -1,0 +1,6 @@
+.display-objetivo {
+    position: absolute;
+    margin-top: 100px;
+    left: 250px;
+    width: calc(100% - 250px);
+}
